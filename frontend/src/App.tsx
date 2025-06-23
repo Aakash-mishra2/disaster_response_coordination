@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 import './App.css';
 
-const API_URL = 'http://localhost:4000'; // Adjust if backend runs elsewhere
+const API_URL = 'https://disaster-response-coordination-w01k.onrender.com';
 
 function App() {
   // Disaster form state
