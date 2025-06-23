@@ -1,8 +1,26 @@
 # Disaster Response Coordination Platform
 
-## Assignment Overview
+## Table of Contents
+- [Overview](#assignment-overview)
+- [Features](#features)
+- [Backend (Node.js, Express.js)](#backend-nodejs-expressjs)
+- [Database (Supabase)](#database-supabase)
+- [External Service Integrations](#external-service-integrations)
+- [Frontend (React)](#frontend-react)
+- [User Flow](#user-flow)
+- [API Documentation](#api-documentation)
+- [Sample Data](#sample-data)
+- [Notes](#notes)
+- [Submission Instructions](#submission-instructions)
+- [Evaluation](#evaluation)
+- [Vibe Coding](#vibe-coding)
+- [Setup & Run Instructions](#setup--run-instructions)
 
-**Duration:** 1 day (8-10 hours)
+---
+
+# Disaster Response Coordination Platform
+
+## Overview
 
 **Objective:**
 Build a backend-heavy MERN stack app for a disaster response platform that aggregates real-time data to aid disaster management. The platform uses Google Gemini API for location extraction and image verification, mapping services for geocoding, Supabase for geospatial queries and caching, and real-time social media monitoring. The frontend is a minimal React interface to test backend functionality. AI tools like Cursor or Windsurf are used to accelerate backend logic.
@@ -223,3 +241,38 @@ supabase.from('disasters').select('*')
 ## Vibe Coding
 - Used Cursor’s Composer and Windsurf’s Cascade for API routes, Supabase queries, and caching logic
 - Example: “Cursor generated WebSocket logic”
+
+---
+
+## Setup & Run Instructions
+
+### 1. Clone the Repository
+```bash
+# Clone the repo and enter the directory
+$ git clone <your-repo-url>
+$ cd disaster_coordination
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+# Install dependencies
+npm install
+# Copy and edit .env
+cp .env.example .env
+# Fill in your Supabase, Gemini, and mapping API keys in .env
+# Start the backend server
+npm run dev
+# (or npm start for production)
+```
+- The backend runs on `http://localhost:4000` by default.
+
+### 3. Frontend Setup
+```bash
+cd frontend
+# Install dependencies
+npm install
+# Start the frontend server
+npm run dev
+```
+- The frontend runs on `http://localhost:5173` by default (Vite).
